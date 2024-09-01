@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" >
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="newBook">
+        NEW BOOK
+    </button>
+    <form id="formShow" action="">
+        <label for="title">Book Title
+            <input type="text" class="title" id="title" required>
+        </label>
+        <label for="author">Author
+            <input type="text" class="author" id="author" required>
+        </label>
+        <label for="pages">Number of Pages
+            <input type="text" class="pages" id="pages" required>
+        </label>
+        <label for="read">Read
+            <input type="checkbox" class="read" id="read">
+        </label>
+        <input type="submit" id="addRecord" value="Add Record">
+    </form>
+
+    <div class="cardRec">
+        
+    </div>
+    <script src="books.js"></script>
+
+</body>
+</html>
