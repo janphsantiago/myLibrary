@@ -11,12 +11,9 @@ function Book(title, author, pages, read) {
     this.read = read; 
 }
 
-Book.prototype.info = function(){
-    return this.title + ' by' + this.author + '' + this.pages + ' ' + this.read;
+Book.prototype.jamesRead = function(){
+    this.read = !this.read;
     }
-
-// Object.setPrototypeOf(Book.prototype, addBookToLibrary.prototype);
-// Object.getPrototypeOf(addBookToLibrary.prototype);
 
 function addBookToLibrary(){
     let title = document.getElementById('title').value;
@@ -52,8 +49,23 @@ function displayBooks() {
         pages.textContent = `Pages: ${book.pages}`;
         
         const read = document.createElement('p');
+        read.classList.add('read-status');
         read.textContent = `Read: ${book.read ? 'Yes' : 'No'}`;
         
+        const readBtn = document.createElement('button');
+        readBtn.textContent = 'Finished Reading?'
+
+        readBtn.addEventListener('click', () => {
+            book.jamesRead();
+            read.textContent = `Read: ${book.read ? 'Yes' : 'No'}`;
+            if (book.read){
+                read.style.backgroundColor = "green";
+            }
+            else{
+                read.style.backgroundColor = "red";
+            }
+         });
+    
         const delRecord = document.createElement('button');
         delRecord.textContent = 'Remove Book'
         delRecord.dataset.index = index;
@@ -67,8 +79,9 @@ function displayBooks() {
         card.appendChild(author);
         card.appendChild(pages);
         card.appendChild(read);
+        card.appendChild(readBtn);
         card.appendChild(delRecord);
- 
+        
         container.appendChild(card);
     });
 }
