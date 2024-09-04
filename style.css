@@ -1,3 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    color: #5D6063;
+    background-color: #EAEDF0;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #formShow{
     display: none;
+    background-color: #F6F7F8;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+        
+    width: 80%;
+    padding: 50px;
+    margin: 0 0 40px 0;
+    
+}
+
+input[type='text'], 
+input[type='number']{
+    background-color: #FFFFFF;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+}
+
+
+label {
+    margin: 20px 0 20px 0;
+}
+
+#read {
+    margin-bottom: 0;
+}
+
+#addRecord{
+    margin: 0 auto;
+}
+
+button, #addRecord {
+    font-size: 16px;
+    font-weight: bold;
+  
+    color: #FFFFFF;
+    background-color: #5995DA;
+  
+    border: none;
+    border-radius: 3px;
+    
+    margin: 15px;
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+#addRecord{
+    display:block;
+}
+
+button:hover, #addRecord:hover {
+    background-color: #76AEED;
+}
+  
+button:active, #addRecord:active {
+    background-color: #407FC7;
 }
