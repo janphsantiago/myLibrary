@@ -12,18 +12,27 @@
         NEW BOOK
     </button>
     <form id="formShow" action="">
-        <label for="title">Book Title</label>
+        <div class="form-row">
+            <label for="title">Book Title</label>
             <input type="text" class="title" id="title" required>
-        
-        <label for="author">Author</label>
+        </div>
+
+        <div class="form-row">
+            <label for="author">Author</label>
             <input type="text" class="author" id="author" required>
-        
-        <label for="pages">Number of Pages
+        </div>
+
+        <div class="form-row">
+            <label for="pages">Number of Pages
             <input type="number" class="pages" id="pages" required>
-        </label>
-        <label for="read">Read
+            </label>
+        </div>
+
+        <div class="form-row">
+            <label for="read">Read
             <input type="checkbox" class="read" id="read">
-        </label>
+            </label>
+        </div>
         <input type="submit" id="addRecord" value="Add Record">
     </form>
 
