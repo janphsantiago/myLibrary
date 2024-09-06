@@ -2,6 +2,7 @@ const newBookBtn = document.getElementById('newBook');
 const addRecord = document.getElementById('addRecord');
 let newRecord = document.querySelector('.newRec');
 const container = document.getElementById('listOfBooks');
+
 const myLibrary = [];
 
 // Constructor
@@ -97,7 +98,12 @@ function displayBooks() {
 
 newBookBtn.addEventListener("click", function() {
     let newForm = document.querySelector('#formShow');
-    newForm.style.display = 'block';
+    if (newForm.style.display === 'block') {
+        newForm.style.display = 'none';
+    } 
+    else {
+        newForm.style.display = 'block';
+    }
 });
 
 document.querySelector('#formShow').addEventListener('submit', function(){

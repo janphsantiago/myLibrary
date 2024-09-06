@@ -53,10 +53,6 @@ label {
     margin-bottom: 0;
 }
 
-#addRecord{
-    margin: 0 auto;
-}
-
 button, #addRecord {
     font-size: 16px;
     font-weight: bold;
@@ -85,8 +81,20 @@ button:active, #addRecord:active {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     width: 70%;
+    row-gap: 20px;
+}
+.read-status{
+    margin-bottom: 15px;
 }
 
+.book-card{
+    background-color: #F6F7F8;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    max-width: 300px;
+    padding: 25px;
+    text-align: center;
+}
 .book-btns{
     display:inline-block;
     text-align: center;
@@ -101,7 +109,6 @@ button:active, #addRecord:active {
     #listOfBooks{
         grid-template-columns: 1fr;
         grid-column: 1;
-        row-gap: 20px;
         text-align: center;
     }
 
